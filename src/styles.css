@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+.author {
+    font-size: small;
+}
+.card {
+    max-width:180px;
+    margin: 10px;
+}
+
+.img {
+    max-width: 180px;
+    max-height: 230px;
+}
+
+.name {
+    font-size: large;
+}
+
+body {
+    padding-left: 3px;
+    padding-right: 3px;
+}

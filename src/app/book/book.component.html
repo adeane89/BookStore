@@ -1,0 +1,19 @@
+<div class="card">
+  <img class="card-img-top img" src="{{book.fullImagePath}}" alt="{{book.name}}">
+  <div class="card-body">
+        <p class="card-text name">{{book.name}}</p>
+        <p class="card-text author">By: {{book.author}}</p>
+        <p class="card-text">{{book.description}}</p>
+        <p class="card-text">{{book.price | currency}}</p>
+        <h6 class="card-text">Avaliable Formats:</h6>
+        <ul class="card-text">
+            <li *ngFor="let format of book.formats">{{format}}</li>
+        </ul>
+  </div>
+    <!--{{book.colors}}-->
+    <select class = "form-control">
+        <option *ngFor="let format of book.formats">{{format}}</option>
+    </select>
+    <button *ngIf="book.inventory > 0" class="btn btn-default" (click)="addToCart()">Add to Cart</button>
+    <button *ngIf="book.inventory <= 0" class="btn btn-danger" disabled>Sold Out</button>
+</div>
