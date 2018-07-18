@@ -1,15 +1,10 @@
-<app-navbar></app-navbar>
-<h1>{{title}}</h1>
+<app-navbar [cart]='cart'></app-navbar>
+<div style="font-family: Arial, sans-serif; color: lightseagreen"><h1>{{title}}</h1></div>
 
-<div class="container">
-    <app-home></app-home>
-</div>
+
+    <app-home [cart]='cart'></app-home>
+
 
 <footer>
     <p>&copy; {{year}}</p>
-    <p>{{sum}}</p>
-    <p>{{numbers}}</p>
-    <p>{{1+2+3}}</p>
-    <p>{{dog}}</p>
-    <p>Is {{dog.name}} hungry? {{dog.isHungry}}</p>
 </footer>

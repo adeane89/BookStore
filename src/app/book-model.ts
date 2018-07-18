@@ -1,3 +1,5 @@
+import { ReviewModel } from './review-model';
+
 export class BookModel {
     id: number;
     name: string;
@@ -7,4 +9,5 @@ export class BookModel {
     author: string;
     inventory: number;
     formats: string[];
+    reviews?: ReviewModel[];
 }

@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
 import { BookModel } from '../book-model';
+
+import {CartModel} from '../cart-model';
+
+import {CartItemModel} from '../cart-item-model';
+
 
 @Component({
   selector: 'app-home',
@@ -8,6 +12,9 @@ import { BookModel } from '../book-model';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+    @Input()
+    cart: CartModel;
+
      homeBook: BookModel[] = [{
         id: 1,
         name: 'Harry Potter and the Sorcerer\'s Stone',
@@ -16,7 +23,20 @@ export class HomeComponent implements OnInit {
         fullImagePath: './assets/hpsorcerers.jpg',
         author: 'J.K. Rowling',
         inventory: 10,
-        formats: ['eBook', 'paperback', 'hardcover']
+        formats: ['eBook', 'paperback', 'hardcover'],
+        reviews: [{
+             id: 1,
+             createddate: 'Tuesday',
+             author: 'joe@codingtemple.com',
+             rating: 5,
+             body: 'I love this book! It is my favorite!'
+         },{
+             id: 2,
+             createddate: 'Wednesday',
+             author: 'ripalp@codingtemple.com',
+             rating: 1,
+             body: 'I hate this book because it\'s lame.'
+         }]
      },
                            {
         id: 2,
