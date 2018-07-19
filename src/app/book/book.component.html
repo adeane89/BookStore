@@ -1,5 +1,5 @@
 <div class="card" style="width: 24rem;">
-  <img class="card-img-top img mx-auto" src="{{book.fullImagePath}}" alt="{{book.name}}">
+  <img class="card-img-top img mx-auto" src="{{getFullImagePath()}}" alt="{{book.name}}">
   <div class="card-body">
       <app-tabs [book]="book"></app-tabs>
       <h5 class ="card-title">{{book.name}}</h5>
@@ -7,7 +7,7 @@
         <p class="card-text">{{book.price | currency}}</p>
   </div>
     <!--{{book.colors}}-->
-    <select class = "form-control">
+    <select class = "form-control" [(ngModel)] = "selectedFormat">
         <option *ngFor="let format of book.formats">{{format}}</option>
     </select>
     <button *ngIf="book.inventory > 0" class="btn btn-secondary" (click)="addToCart()">Add to Cart</button>

@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
         fullImagePath: './assets/hpsorcerers.jpg',
         author: 'J.K. Rowling',
         inventory: 10,
-        formats: ['eBook', 'paperback', 'hardcover'],
+        formats: ['eBook', 'paperback', 'hardcover', 'movie'],
         reviews: [{
              id: 1,
              createddate: 'Tuesday',
@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
         fullImagePath: './assets/hpchamber.jpg',
         author: 'J.K. Rowling',
         inventory: 12,
-        formats: ['eBook', 'paperback', 'hardcover']
+        formats: ['eBook', 'paperback', 'hardcover', 'movie']
     },
                             {
         id: 3,
@@ -56,7 +56,7 @@ export class HomeComponent implements OnInit {
         fullImagePath: './assets/hpprisoner1.jpg',
         author: 'J.K. Rowling',
         inventory: 1,
-        formats: ['eBook', 'paperback', 'hardcover']
+        formats: ['eBook', 'paperback', 'hardcover', 'movie']
     },
                             {
         id: 4,
@@ -66,7 +66,7 @@ export class HomeComponent implements OnInit {
         fullImagePath: './assets/hpgoblet.jpg',
         author: 'J.K. Rowling',
         inventory: 6,
-        formats: ['eBook', 'paperback', 'hardcover']
+        formats: ['eBook', 'paperback', 'hardcover', 'movie']
     },
                             {
         id: 5,
@@ -76,7 +76,7 @@ export class HomeComponent implements OnInit {
         fullImagePath: './assets/hporder.jpg',
         author: 'J.K. Rowling',
         inventory: 6,
-        formats: ['eBook', 'paperback', 'hardcover']
+        formats: ['eBook', 'paperback', 'hardcover', 'movie']
     },
                             {
         id: 6,
@@ -86,7 +86,7 @@ export class HomeComponent implements OnInit {
         fullImagePath: './assets/hphalf.jpg',
         author: 'J.K. Rowling',
         inventory: 6,
-        formats: ['eBook', 'paperback', 'hardcover']
+        formats: ['eBook', 'paperback', 'hardcover', 'movie']
     },
                             {
         id: 7,
@@ -96,7 +96,7 @@ export class HomeComponent implements OnInit {
         fullImagePath: './assets/hpdeathly.jpg',
         author: 'J.K. Rowling',
         inventory: 6,
-        formats: ['eBook', 'paperback', 'hardcover']
+        formats: ['eBook', 'paperback', 'hardcover', 'movie']
     }];
   constructor() { }
 

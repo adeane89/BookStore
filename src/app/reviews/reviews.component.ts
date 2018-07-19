@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { BookModel } from '../book-model';
 import { ReviewModel } from '../review-model';
 
+import { AvatarService } from '../avatar.service';
+
 @Component({
   selector: 'app-reviews',
   templateUrl: './reviews.component.html',
@@ -14,7 +16,7 @@ export class ReviewsComponent implements OnInit {
 
     newReview: ReviewModel;
 
-  constructor() { }
+  constructor(private avatarService: AvatarService) { }
 
   ngOnInit() {
       this.newReview = {

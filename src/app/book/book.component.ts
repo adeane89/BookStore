@@ -17,8 +17,23 @@ export class BookComponent implements OnInit {
     @Input()
     cart: CartModel;
 
+    selectedFormat: string;
+
+    getFullImagePath(){
+        if(this.selectedFormat === 'movie') {
+            let image : string[];
+            image = this.book.fullImagePath.split('.');
+            return "." + image[1] + '-movie.' + image[2];
+            } else{
+                return this.book.fullImagePath;
+            }
+    }
+
+
     constructor() { }
-    ngOnInit() { }
+    ngOnInit() {
+        this.selectedFormat = this.book.formats[0];
+    }
     addToCart() {
         this.book.inventory = this.book.inventory - 1;
         if (this.book.inventory <= 0) {

@@ -1,11 +1,18 @@
+@font-face {
+    font-family: "Harry Potter";
+    src: url('HARRYP.ttf');
+    font-family: "Lumos";
+    src: url('LumosLatino.ttf');
+}
+
 .author {
     font-size: small;
 }
 
 .card {
     border: 0;
-    padding-bottom: 4vh;
-    padding-top: 4vh;
+    opacity: .8;
+    padding-top: 3vh;
 }
 
 .card-body {
@@ -14,9 +21,9 @@
 }
 
 .card-deck {
-    margin-left: 10px;
-    margin-right: 10px;
     justify-content: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 
 .img {
@@ -25,6 +32,27 @@
     align-items:center;
 }
 
+.movie {
+    background-image: url("assets/hphalf.jpg");
+}
+
 .name {
     font-size: large;
+}
+
+.navbar {
+    font-family: "Lumos", "Arial";
+    font-size: large;
+}
+
+
+.print {
+    background-image: url("assets/hpsorcerers.jpg");
+}
+
+body {
+    background-image: url("assets/background.jpg");
+    background-color: white;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
