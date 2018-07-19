@@ -10,5 +10,4 @@ export class BookModel {
     inventory: number;
     formats: string[];
     reviews?: ReviewModel[];
-    selectedFormat: string;
 }

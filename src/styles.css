@@ -32,10 +32,6 @@
     align-items:center;
 }
 
-.movie {
-    background-image: url("assets/hphalf.jpg");
-}
-
 .name {
     font-size: large;
 }
@@ -43,11 +39,6 @@
 .navbar {
     font-family: "Lumos", "Arial";
     font-size: large;
-}
-
-
-.print {
-    background-image: url("assets/hpsorcerers.jpg");
 }
 
 body {

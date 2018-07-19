@@ -6,7 +6,7 @@
         <p class="card-text author">By: {{book.author}}</p>
         <p class="card-text">{{book.price | currency}}</p>
   </div>
-    <!--{{book.colors}}-->
+    <!--{{book.formats}}-->
     <select class = "form-control" [(ngModel)] = "selectedFormat">
         <option *ngFor="let format of book.formats">{{format}}</option>
     </select>
