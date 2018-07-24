@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { BookModel } from '../book-model';
 import { ReviewModel } from '../review-model';
 
+import {HttpClient, HttpHeaders } from '@angular/common/http';
 import { AvatarService } from '../avatar.service';
 
 @Component({
@@ -16,7 +17,7 @@ export class ReviewsComponent implements OnInit {
 
     newReview: ReviewModel;
 
-  constructor(private avatarService: AvatarService) { }
+  constructor(private avatarService: AvatarService, private httpClient: HttpClient) { }
 
   ngOnInit() {
       this.newReview = {
@@ -32,8 +33,10 @@ export class ReviewsComponent implements OnInit {
         if (!this.book.reviews) {
             this.book.reviews = [];
         }
+
+         this.httpClient.post('http://localhost:62144/book/addreview', {body: this.newReview.body, author: this.newReview.author, rating: this.newReview.rating}).subscribe((x) => {console.log(x)});
+
         this.book.reviews.push(this.newReview);
-        //TODO: This does not save reviews! I should figure out a way to send my new review to a "persisted data store" to POST it
         this.ngOnInit();
         }
 }

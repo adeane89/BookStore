@@ -1,23 +1,14 @@
-<ul class="nav nav-pills btn btn-sm">
+<ul class="nav nav-pills btn btn-sm" style="justify-content: center">
 	<li class="nav-item">
 		<a class="nav-link" href="#" (click)="setTab(1)" [class.active] ="tab ===1">Description</a>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link" href="#" (click)="setTab(2)" [class.active] ="tab ===2">Book Formats Available</a>
-	</li>
-	<li class="nav-item">
-		<a class="nav-link" href="#" (click)="setTab(3)" [class.active] ="tab ===3">Reviews</a>
+		<a class="nav-link" href="#" (click)="setTab(2)" [class.active] ="tab ===2">Reviews</a>
 	</li>
 </ul>
 <div *ngIf="tab === 1">
 	<p class="card-text">{{book.description}}</p>
 </div>
 <div *ngIf="tab === 2">
-	 <h6 class="card-text">Avaliable Formats:</h6>
-        <ul class="card-text">
-            <li *ngFor="let format of book.formats">{{format}}</li>
-        </ul>
-</div>
-<div *ngIf="tab === 3">
     <app-reviews [book]="book"></app-reviews>
 </div>
