@@ -17,6 +17,6 @@ export class HomeComponent implements OnInit {
     homeBook: BookModel[];
     constructor(private httpClient: HttpClient) { }
     ngOnInit() {
-        this.httpClient.get<BookModel[]>('http://localhost:62144').subscribe((results) => {this.homeBook = results});
+         this.httpClient.get<BookModel[]>('./assets/book.json').subscribe((results) => {this.homeBook = results});
   }
 }

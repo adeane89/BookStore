@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { BookModel } from '../book-model';
 import { ReviewModel } from '../review-model';
 
-import {HttpClient, HttpHeaders } from '@angular/common/http';
+//import {HttpClient, HttpHeaders } from '@angular/common/http';
 import { AvatarService } from '../avatar.service';
 
 @Component({
@@ -17,7 +17,7 @@ export class ReviewsComponent implements OnInit {
 
     newReview: ReviewModel;
 
-  constructor(private avatarService: AvatarService, private httpClient: HttpClient) { }
+  constructor(private avatarService: AvatarService) { }
 
   ngOnInit() {
       this.newReview = {
@@ -34,7 +34,7 @@ export class ReviewsComponent implements OnInit {
             this.book.reviews = [];
         }
 
-         this.httpClient.post('http://localhost:62144/book/addreview', {body: this.newReview.body, author: this.newReview.author, rating: this.newReview.rating}).subscribe((x) => {console.log(x)});
+         //this.httpClient.post('http://localhost:62144/book/addreview', {body: this.newReview.body, author: this.newReview.author, rating: this.newReview.rating}).subscribe((x) => {console.log(x)});
 
         this.book.reviews.push(this.newReview);
         this.ngOnInit();
